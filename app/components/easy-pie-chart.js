@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-easypiechart/components/easy-pie-chart';

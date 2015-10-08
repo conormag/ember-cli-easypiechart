@@ -2,5 +2,10 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-easypiechart'
+  name: 'ember-cli-easypiechart',
+
+  included: function(app) {
+    this._super.included(app);
+    app.import(app.bowerDirectory + '/jquery.easy-pie-chart/dist/jquery.easypiechart.js');
+  }
 };
