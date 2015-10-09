@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   layout: layout,
   tagName: 'div',
   percent: 0,
+  easyPieChart: null,
 
   attributeBindings: ['percent:data-percent'],
 
