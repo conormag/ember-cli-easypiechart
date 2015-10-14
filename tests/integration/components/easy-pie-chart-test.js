@@ -13,7 +13,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{easy-pie-chart}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), '0%');
 
   // Template block usage:
   this.render(hbs`
