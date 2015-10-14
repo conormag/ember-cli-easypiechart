@@ -11,11 +11,11 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/conormag/ember-cli-easypiechart",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Conor Maguire",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",

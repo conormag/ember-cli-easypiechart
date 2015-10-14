@@ -23,8 +23,8 @@ export default Ember.Component.extend({
   	this.set('easyPieChart', easyPieChart);
   },
 
-	percentDidChange: function(){
+	updatePercent: Ember.observer('percent', function(){
 		var percent = this.get('percent');
 		this.get('easyPieChart').data('easyPieChart').update(percent);
-	}.observes('percent')
+	})
 });
