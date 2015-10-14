@@ -1,6 +1,8 @@
 # Ember-cli-easypiechart
 
-This README outlines the details of collaborating on this Ember addon.
+[![Build Status](https://travis-ci.org/conormag/ember-cli-easypiechart.svg?branch=master)](https://travis-ci.org/conormag/ember-cli-easypiechart)
+
+An [ember-cli](http://www.ember-cli.com) addon for using [jQuery Easy Pie Chart](https://rendro.github.io/easy-pie-chart/) in Ember applications.
 
 ## Installation
 
