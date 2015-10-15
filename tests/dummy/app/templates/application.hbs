@@ -1,12 +1,37 @@
-<h2 id="title">Welcome to Ember</h2>
-	{{easy-pie-chart
-	    class="easy-pie main-pie"
-	    percent="70"
-	    trackColor='rgba(0,255,255,0.2)'
-	    scaleColor='rgba(255,0,255,0.5)'
-	    barColor='rgba(255,255,0,0.7)'
-	    lineWidth=7
-	    lineCap='butt'
-	    size=148
-	}}
+<div class="wrapper">
+
+	<h2 id="title">Welcome to Ember</h2>
+<section>
+	<div style="float:left">
+	  <div class="chart">
+			{{easy-pie-chart
+			    percent=percent1
+			    animate=2000
+			    onStep=onStep
+			    animationOn=animationOn
+			    onStop=onStop
+			}}
+	    <div class="label">New visitors</div>
+	  </div>
+	  <div class="chart">
+			{{#easy-pie-chart
+				elementId="block"
+			  percent=percent
+			  animate=1000
+			}}
+				<span class="percentage">{{percent}}</span>%
+			{{/easy-pie-chart}}
+	    <div class="label">Bounce rate</div>
+	  </div>
+	</div>
+	<div style="float:right">
+		<p>Will Animate: {{animationOn}}</p>
+		{{input type="text" value=newpercent id="newval"}}
+		<input type="submit" value="change" id="submitpc" 
+			{{action "updatePercent" newpercent}} >
+		<input class="toggle1" type="submit" value="Toggle Animation"
+			{{action "toggleAnimation"}}>
+	</div>
+</section>
+</div>
 {{outlet}}

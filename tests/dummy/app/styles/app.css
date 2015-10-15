@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
+body {
+  padding:50px;
+  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#777;
+  font-weight:300;
+}
+
+
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+.easyPieChart {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.easyPieChart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.chart {
+    float: left;
+    margin: 10px;
+}
+
+.percentage,
+.easyPieChartValue,
+.label {
+    text-align: center;
+    color: #333;
+    font-weight: 100;
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+}
+
+.credits {
+    padding-top: 0.5em;
+    clear: both;
+    color: #999;
+}
+
+.credits a {
+    color: #333;
+}
+
+.dark {
+    background: #333;
+}
+
+.dark .percentage-light,
+.dark .label {
+    text-align: center;
+    color: #999;
+    font-weight: 100;
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+}

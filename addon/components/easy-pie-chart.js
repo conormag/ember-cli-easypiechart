@@ -1,38 +1,48 @@
 import Ember from 'ember';
 import layout from '../templates/components/easy-pie-chart';
 
+const { on, observer} = Ember;
+
 export default Ember.Component.extend({
   layout: layout,
   tagName: 'div',
 
-  percent: 0,
-  easyPie: undefined,
-  barColor: '#ef1e25',
-  trackColor: '#f2f2f2',
-  scaleColor: '#dfe0e0',
-  lineCap: 'round',
-  lineWidth: '3',
-  size: '110',
-  animate: false,
-
   attributeBindings: ['percent:data-percent'],
+  classNames: ['easyPieChart'],
+  percent: 0,
+  newpercent:15,
+  easyPieChart: undefined,
+  animationOn: true,
+  symbol: "%",
 
-  initialize: Ember.on('didInsertElement', function() {
+
+  initialize: on('didInsertElement', function() {
     let properties = this.getProperties(
-      'barColor', 'trackColor', 'scaleColor', 
-      'lineCap', 'lineWidth' , 'size' ,
-      'animate' 
-      //,'onStart', 'onStop', 'onStep'
+      'barColor', 'trackColor', 'scaleColor', 'scaleLength',
+      'lineCap', 'lineWidth' , 'trackWidth', 'size', 'rotate',
+      'animate', 'easing', 'onStart', 'onStop', 'onStep'
       );
-    //console.log(JSON.stringify(properties));
 
     let easyPieChart = this.$().easyPieChart(properties);
 
-    this.set('easyPie', easyPieChart);
+    this.set('easyPieChart', easyPieChart);
   }),
 
-  updatePercent: Ember.observer('percent', function(){
-    var percent = this.get('percent');
-    this.get('easyPie').data('easyPieChart').update(percent);
-  })
+  updatePercent: observer('percent', function(){
+    let percent = this.get('percent') || 0;
+    this.get('easyPieChart').data('easyPieChart').update(percent);
+  }),
+
+  toggleAnimation: observer('animationOn', function() {
+    let isEnabled = this.get('animationOn');
+    if (isEnabled) {
+      this.get('easyPieChart').data('easyPieChart').enableAnimation();
+    } else {
+      this.get('easyPieChart').data('easyPieChart').disableAnimation();
+    }
+  }),
+
+  destroyEasyPieChart: on('willDestroyElement', function() {
+    this.destroy();
+  }),
 });
