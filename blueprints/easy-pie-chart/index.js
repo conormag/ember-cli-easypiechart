@@ -1,3 +1,9 @@
+'use strict';
+
+var fs = require('fs');
+
+var EASYPIECHART_VERSION = '2.1.6'
+
 module.exports = {
   description: 'Installs easy-pie-chart as a dependency'
 
@@ -5,7 +11,6 @@ module.exports = {
 
   afterInstall: function(options) {
     // https://github.com/rendro/easy-pie-chart
-    console.log("adding pacjkage");
-    return this.addBowerPackageToProject('jquery.easy-pie-chart', '2.1.6');
+    return this.addBowerPackageToProject('jquery.easy-pie-chart', EASYPIECHART_VERSION);
   }
 };
