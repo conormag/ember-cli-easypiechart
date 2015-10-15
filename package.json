@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-easypiechart",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An ember-cli addon for using jQuery.easy-pie-chart in Ember applications.",
   "directories": {
     "doc": "doc",
     "test": "tests"
