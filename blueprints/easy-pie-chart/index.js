@@ -9,7 +9,7 @@ module.exports = {
 
   normalizeEntityName: function() {},
 
-  afterInstall: function(options) {
+  afterInstall: function(options) { 
     // https://github.com/rendro/easy-pie-chart
     return this.addBowerPackageToProject('jquery.easy-pie-chart', EASYPIECHART_VERSION);
   }

@@ -47,7 +47,6 @@
     "ember-cli-htmlbars": "0.7.9"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config",
-    "defaultBlueprint": "easy-pie-chart"
+    "configPath": "tests/dummy/config"
   }
 }
