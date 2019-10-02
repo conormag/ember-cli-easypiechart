@@ -1,3 +1,4 @@
+import { click, fillIn, visit } from '@ember/test-helpers';
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from '../../tests/helpers/start-app';
@@ -12,18 +13,13 @@ module('Acceptance | easy pie chart', {
   }
 });
 
-test('changing component value updates plugin', function(assert) {
+test('changing component value updates plugin', async function(assert) {
   assert.expect(1);
 
-  visit('/');
+  await visit('/');
 
-  andThen(function() {
-    fillIn("#newval","55");
-    click("#submitpc");
-  });
-
-  andThen(function() {
-    var blockComponent = $("#block");
-    assert.equal(blockComponent.text().trim(), '55%');
-  });
+  await fillIn("#newval","55");
+  await click("#submitpc");
+  var blockComponent = $("#block");
+  assert.equal(blockComponent.text().trim(), '55%');
 });

@@ -23,7 +23,7 @@ export default Ember.Component.extend({
       'animate', 'easing', 'onStart', 'onStop', 'onStep'
       );
 
-    let easyPieChart = this.$().easyPieChart(properties);
+    let easyPieChart = this.element.addEventListener(properties);
 
     this.set('easyPieChart', easyPieChart);
   }),
