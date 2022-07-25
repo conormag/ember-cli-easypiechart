@@ -1,6 +1,7 @@
-# ember-cli-easypiechart
+ember-cli-easypiechart
+==============================================================================
 
-This README outlines the details of collaborating on this Ember addon.
+[Short description of the addon.]
 
 # Ember-cli-easypiechart
 
@@ -56,17 +57,28 @@ export default Ember.Controller.extend({
 * `bower install`
 ## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
 
-## Running Tests
+Installation
+------------------------------------------------------------------------------
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```
+ember install ember-cli-easypiechart
+```
 
-## Building
 
-* `ember build`
+Usage
+------------------------------------------------------------------------------
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+[Longer description of how to use the addon in apps.]
+
+
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).

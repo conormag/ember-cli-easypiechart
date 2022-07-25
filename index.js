@@ -1,11 +1,10 @@
-/* eslint-env node */
 'use strict';
 
 var fs = require('fs');
 var path = require('path');
 
 module.exports = {
-    name: 'ember-cli-easypiechart',
+    name: require('./package').name,
 
     included: function(app) {
         this.app = app;
