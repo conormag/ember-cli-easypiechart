@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.26.10",
-    "ember-cli-htmlbars": "^5.7.2"
+    "ember-cli-htmlbars": "^5.7.2",
+    "easy-pie-chart": "2.1.6"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",

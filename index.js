@@ -10,6 +10,7 @@ module.exports = {
         this.app = app;
         this._super.included(app);
 
-        app.import(app.bowerDirectory + '/jquery.easy-pie-chart/dist/jquery.easypiechart.js');
+        //app.import(app.bowerDirectory+ '/jquery/dist/jquery.min.js');
+        app.import('node_modules/easy-pie-chart/dist/jquery.easypiechart.min.js');
     }
 };

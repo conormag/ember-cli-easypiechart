@@ -1,8 +1,7 @@
 {
     "name": "ember-cli-easypiechart",
     "dependencies": {
-        "jquery": "^1.11.1",
-        "jquery.easy-pie-chart": "2.1.6"
+        "jquery": "^1.11.1"        
     },
     "devDependencies": {}
 }
